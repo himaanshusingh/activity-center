@@ -4,7 +4,7 @@ A responsive React dashboard for tracking operational workflows across NAV, capi
 
 ## Demo
 
-- Live Demo: [Add your demo link here](https://example.com)
+- Live Demo: [https://activity-center-alchelyst.vercel.app](https://activity-center-alchelyst.vercel.app)
 
 > Replace the URL above with your deployed app link after publishing.
 
