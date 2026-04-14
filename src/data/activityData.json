@@ -1,0 +1,181 @@
+{
+  "tabs": ["NAV Workflows", "Other Workflows", "Capital Events", "Reports", "Payments"],
+  "filters": {
+    "funds": ["All funds", "EBBR Holdings", "Steerhead NL", "EBBR Rep III", "EBBR Fund I"],
+    "statuses": ["Pending action", "At risk"]
+  },
+  "dateRange": { "from": "01 Dec 2023", "to": "14 Apr 2026" },
+  "user": { "initials": "JD", "name": "John Doe" },
+  "navOverview": {
+    "title": "NAV Overview",
+    "icon": "clipboard",
+    "iconColor": "blue",
+    "totalWorkflows": 26,
+    "workflows": [
+      {
+        "id": 1,
+        "fund": "EBBR",
+        "entity": "EBBR Holdings LLC",
+        "workflow": "BBR Quarterly NAV",
+        "valueDate": "30 Sep 2025",
+        "progress": 72,
+        "progressColor": "amber",
+        "checkpoints": [
+          { "label": "Pre-period checks", "status": "done" },
+          { "label": "Transactions", "status": "done" },
+          { "label": "Capital & P&L", "status": "done" },
+          { "label": "Client approval", "status": "warn" }
+        ]
+      },
+      {
+        "id": 2,
+        "fund": "Steerhead NL",
+        "entity": "Large Cap Direct Lending",
+        "workflow": "Daily Deliverables",
+        "valueDate": "30 Sep 2025",
+        "progress": 45,
+        "progressColor": "blue",
+        "checkpoints": [
+          { "label": "Trade processing", "status": "warn" },
+          { "label": "Pricing", "status": "warn" },
+          { "label": "Reconciliation", "status": "warn" }
+        ]
+      },
+      {
+        "id": 3,
+        "fund": "Steerhead NL",
+        "entity": "Large Cap Direct Lending",
+        "workflow": "FA Daily Workflow",
+        "valueDate": "30 Sep 2025",
+        "progress": 20,
+        "progressColor": "blue",
+        "checkpoints": [
+          { "label": "Capital activity", "status": "gray" },
+          { "label": "Trade capture", "status": "gray" },
+          { "label": "Corp. actions", "status": "gray" },
+          { "label": "Non-trading", "status": "gray" }
+        ]
+      },
+      {
+        "id": 4,
+        "fund": "Steerhead NL",
+        "entity": "Large Cap Direct Lending",
+        "workflow": "DA Daily Workflow",
+        "valueDate": "30 Sep 2025",
+        "progress": 88,
+        "progressColor": "green",
+        "checkpoints": [
+          { "label": "Trade capture", "status": "done" },
+          { "label": "Security master", "status": "done" },
+          { "label": "Pricing & FX", "status": "done" },
+          { "label": "Income", "status": "done" },
+          { "label": "DA Sign-off", "status": "warn" }
+        ]
+      },
+      {
+        "id": 5,
+        "fund": "Steerhead NL",
+        "entity": "Large Cap Direct Lending",
+        "workflow": "DA Daily Workflow",
+        "valueDate": "26 Sep 2025",
+        "progress": 62,
+        "progressColor": "amber",
+        "checkpoints": [
+          { "label": "Trade capture", "status": "done" },
+          { "label": "Security master", "status": "done" },
+          { "label": "Pricing & FX", "status": "done" },
+          { "label": "Income", "status": "warn" }
+        ]
+      }
+    ]
+  },
+  "otherWorkflows": {
+    "title": "Other Workflows",
+    "icon": "clock",
+    "iconColor": "gray",
+    "total": 2,
+    "items": [
+      {
+        "id": 1,
+        "fund": "Steerhead Tech",
+        "entity": "Innovation Fund",
+        "name": "Controller Report Pack",
+        "valueDate": "30 May 2025",
+        "statuses": [
+          { "label": "Pre-req check", "type": "pending" },
+          { "label": "CAS Reports ✓", "type": "delivered" }
+        ]
+      },
+      {
+        "id": 2,
+        "fund": "Steerhead Tech",
+        "entity": "Innovation Fund",
+        "name": "Controller Report Pack",
+        "valueDate": "12 Mar 2025",
+        "statuses": [
+          { "label": "Pre-req check", "type": "pending" },
+          { "label": "CAS Reports ✓", "type": "delivered" }
+        ]
+      }
+    ]
+  },
+  "capitalEvents": {
+    "title": "Capital Events",
+    "icon": "dollar",
+    "iconColor": "amber",
+    "total": 10,
+    "items": [
+      { "id": "5004", "fund": "EBBR Rep III", "type": "Net Call", "valueDate": "30 Mar 2026", "status": "initiated" },
+      { "id": "4999", "fund": "EBBR Rep III", "type": "Call", "valueDate": "30 Mar 2026", "status": "initiated" },
+      { "id": "4994", "fund": "EBBR Rep III", "type": "Call", "valueDate": "30 Mar 2026", "status": "initiated" },
+      { "id": "4987", "fund": "EBBR Rep III", "type": "Call", "valueDate": "13 Mar 2026", "status": "initiated" },
+      { "id": "4963", "fund": "EBBR Fund I", "type": "Call", "valueDate": "14 Feb 2026", "status": "review" }
+    ]
+  },
+  "reports": {
+    "title": "Reports",
+    "icon": "file",
+    "iconColor": "green",
+    "total": 2,
+    "items": [
+      { "id": 1, "entity": "Steerhead Alt Energy", "report": "Reconciliations", "group": "Accounting", "created": "30 May 2025", "status": "delivered" },
+      { "id": 2, "entity": "AHTestFeeder", "report": "Carry Calculation", "group": "Accounting", "created": "—", "status": "pending" }
+    ]
+  },
+  "payments": {
+    "title": "Payments",
+    "icon": "creditCard",
+    "iconColor": "purple",
+    "total": 2,
+    "items": [
+      { "id": "406", "type": "Deal Payment", "valueDate": "20 Jun 2025", "amount": "50,000.00", "description": "test", "status": "client" },
+      { "id": "399", "type": "One Off Payment", "valueDate": "19 Jun 2025", "amount": "9,000.00", "description": "test", "status": "client" }
+    ]
+  },
+  "modalDefaults": {
+    "kpis": [
+      { "label": "Subscriptions (YTD)", "value": "$33.0M", "sub": "Net: $32.34M" },
+      { "label": "Redemptions (YTD)", "value": "$5.0M", "sub": "Net: $5.05M" },
+      { "label": "Workflow progress", "value": "72%", "sub": "8 of 11 steps done", "dynamic": true },
+      { "label": "Pending actions", "value": "2", "sub": "Client approval needed", "warn": true }
+    ],
+    "tabs": ["Overview", "Capital Balance", "Reconciliation", "NAV Pack"],
+    "workflowSteps": [
+      { "name": "Pre period end checks", "status": "Completed", "state": "done" },
+      { "name": "Transactions processing", "status": "Completed", "state": "done" },
+      { "name": "Payable / Receivable", "status": "Completed", "state": "done" },
+      { "name": "Capital and P&L", "status": "Completed", "state": "done" },
+      { "name": "Reports review", "status": "Completed", "state": "done" },
+      { "name": "Post NAV", "status": "Completed", "state": "done" },
+      { "name": "Client approval – NAV", "status": "Awaiting client", "state": "warn" },
+      { "name": "Client approval – PCAP & FS", "status": "Awaiting client", "state": "warn" }
+    ],
+    "investors": [
+      { "name": "Investor A", "opening": "$0.0M", "subscriptions": "+$10.0M", "redemptions": "$0.0M", "pnl": "+$0.85M", "fees": "-$0.20M", "closing": "$10.65M", "status": "Active" },
+      { "name": "Investor B", "opening": "$0.0M", "subscriptions": "+$15.0M", "redemptions": "$0.0M", "pnl": "+$1.29M", "fees": "-$0.30M", "closing": "$15.99M", "status": "Active" },
+      { "name": "Investor C", "opening": "$20.0M", "subscriptions": "$0.0M", "redemptions": "-$5.0M", "pnl": "+$1.72M", "fees": "-$0.41M", "closing": "$16.31M", "status": "Active" },
+      { "name": "Investor D", "opening": "$0.0M", "subscriptions": "+$8.0M", "redemptions": "$0.0M", "pnl": "+$0.22M", "fees": "-$0.16M", "closing": "$8.06M", "status": "Active" },
+      { "name": "Investor E", "opening": "$30.0M", "subscriptions": "$0.0M", "redemptions": "$0.0M", "pnl": "+$2.58M", "fees": "-$0.61M", "closing": "$31.97M", "status": "Active" }
+    ]
+  }
+}
