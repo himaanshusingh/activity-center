@@ -161,8 +161,7 @@ Typical deploy flow:
 
 1. Run `npm run build`
 2. Deploy the generated `dist/` folder (or connect repo for CI/CD deploy)
-3. Update the Demo link section in this README with the live URL
 
-## License
+## Author
 
-This project is currently unlicensed. Add a license section/file if you plan to distribute it publicly.
+- [@HimanshuSingh](https://github.com/himaanshusingh)
