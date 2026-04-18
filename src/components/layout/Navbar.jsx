@@ -1,6 +1,5 @@
 import { Calendar, LayoutGrid } from "lucide-react";
 import { useActivity } from "@/context/ActivityContext.jsx";
-import { cn } from "@/lib/utils.js";
 
 const Navbar = () => {
   const { data, activeTab, setActiveTab } = useActivity();
@@ -22,10 +21,9 @@ const Navbar = () => {
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={cn(
-                  "px-3 py-2.5 text-xs border-b-2 border-transparent cursor-pointer whitespace-nowrap transition-colors",
+                className={`px-3 py-2.5 text-xs border-b-2 border-transparent cursor-pointer whitespace-nowrap transition-colors ${
                   activeTab === tab ? "text-ac-blue border-b-ac-blue font-medium" : "text-muted-foreground hover:text-foreground"
-                )}
+                }`}
               >
                 {tab}
               </button>
@@ -48,10 +46,9 @@ const Navbar = () => {
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={cn(
-                "px-3 lg:px-4 text-[13px] border-b-2 border-transparent cursor-pointer flex items-center whitespace-nowrap transition-colors",
+              className={`px-3 lg:px-4 text-[13px] border-b-2 border-transparent cursor-pointer flex items-center whitespace-nowrap transition-colors ${
                 activeTab === tab ? "text-ac-blue border-b-ac-blue font-medium" : "text-muted-foreground hover:text-foreground"
-              )}
+              }`}
             >
               {tab}
             </button>

@@ -13,7 +13,17 @@ const NAVOverview = () => {
   const { navOverview } = data;
   const [page, setPage] = useState(1);
 
-  const filtered = navOverview.workflows.filter((w) => !searchQuery || w.fund.toLowerCase().includes(searchQuery.toLowerCase()) || w.workflow.toLowerCase().includes(searchQuery.toLowerCase()));
+  const filtered = navOverview.workflows.filter((workflow) => {
+    if (!searchQuery) {
+      return true;
+    }
+    
+    const query = searchQuery.toLowerCase();
+    const fundMatch = workflow.fund.toLowerCase().includes(query);
+    const workflowMatch = workflow.workflow.toLowerCase().includes(query);
+    
+    return fundMatch || workflowMatch;
+  });
   const totalPages = Math.ceil(navOverview.totalWorkflows / ITEMS_PER_PAGE);
   const displayed = filtered.slice((page - 1) * ITEMS_PER_PAGE, page * ITEMS_PER_PAGE);
 

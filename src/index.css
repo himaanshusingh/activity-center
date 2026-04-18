@@ -1,126 +1,88 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap");
 @import "tailwindcss";
 
-@theme inline {
-  --color-background: var(--app-background);
-  --color-foreground: var(--app-foreground);
-  --color-card: var(--app-card);
-  --color-card-foreground: var(--app-card-foreground);
-  --color-popover: var(--app-popover);
-  --color-popover-foreground: var(--app-popover-foreground);
-  --color-primary: var(--app-primary);
-  --color-primary-foreground: var(--app-primary-foreground);
-  --color-secondary: var(--app-secondary);
-  --color-secondary-foreground: var(--app-secondary-foreground);
-  --color-muted: var(--app-muted);
-  --color-muted-foreground: var(--app-muted-foreground);
-  --color-accent: var(--app-accent);
-  --color-accent-foreground: var(--app-accent-foreground);
-  --color-destructive: var(--app-destructive);
-  --color-destructive-foreground: var(--app-destructive-foreground);
-  --color-border: var(--app-border);
-  --color-input: var(--app-input);
-  --color-ring: var(--app-ring);
-  --color-surface2: var(--app-surface2);
-  --color-border-strong: var(--app-border-strong);
-  --color-ac-blue: var(--app-ac-blue);
-  --color-ac-blue-light: var(--app-ac-blue-light);
-  --color-ac-blue-mid: var(--app-ac-blue-mid);
-  --color-ac-green: var(--app-ac-green);
-  --color-ac-green-light: var(--app-ac-green-light);
-  --color-ac-amber: var(--app-ac-amber);
-  --color-ac-amber-light: var(--app-ac-amber-light);
-  --color-ac-red: var(--app-ac-red);
-  --color-ac-purple: var(--app-ac-purple);
-  --color-ac-purple-light: var(--app-ac-purple-light);
-  --color-ac-gray-light: var(--app-ac-gray-light);
-  --color-ac-gray-mid: var(--app-ac-gray-mid);
-}
-
 :root {
-  --app-background: hsl(220 14% 96%);
-  --app-foreground: hsl(221 39% 11%);
-  --app-card: hsl(0 0% 100%);
-  --app-card-foreground: hsl(221 39% 11%);
-  --app-popover: hsl(0 0% 100%);
-  --app-popover-foreground: hsl(221 39% 11%);
-  --app-primary: hsl(217 91% 60%);
-  --app-primary-foreground: hsl(0 0% 100%);
-  --app-secondary: hsl(220 14% 96%);
-  --app-secondary-foreground: hsl(221 39% 11%);
-  --app-muted: hsl(220 14% 96%);
-  --app-muted-foreground: hsl(218 11% 65%);
-  --app-accent: hsl(220 14% 96%);
-  --app-accent-foreground: hsl(221 39% 11%);
-  --app-destructive: hsl(0 72% 51%);
-  --app-destructive-foreground: hsl(0 0% 100%);
-  --app-border: hsl(218 18% 89%);
-  --app-input: hsl(218 18% 89%);
-  --app-ring: hsl(217 91% 60%);
-  --radius: 0.625rem;
-  --app-surface2: hsl(210 20% 98%);
-  --app-border-strong: hsl(216 12% 84%);
-  --app-ac-blue: hsl(217 91% 60%);
-  --app-ac-blue-light: hsl(214 100% 97%);
-  --app-ac-blue-mid: hsl(213 97% 87%);
-  --app-ac-green: hsl(142 76% 36%);
-  --app-ac-green-light: hsl(138 76% 97%);
-  --app-ac-amber: hsl(32 95% 44%);
-  --app-ac-amber-light: hsl(48 100% 96%);
-  --app-ac-red: hsl(0 72% 51%);
-  --app-ac-purple: hsl(263 70% 58%);
-  --app-ac-purple-light: hsl(263 100% 97%);
-  --app-ac-gray-light: hsl(220 14% 96%);
-  --app-ac-gray-mid: hsl(220 13% 91%);
+  --color-page-bg: #f3f4f6;
+  --color-text-main: #111827;
+  --color-surface-card: #ffffff;
+  --color-brand-primary: #3c83f6;
+  --color-text-on-primary: #ffffff;
+  --color-muted-bg: #f3f4f6;
+  --color-text-muted: #9ca3b0;
+  --color-border-default: #dee2e8;
+  --color-surface-subtle: #f9fafb;
+  --color-border-strong: #d1d5db;
+  --color-accent-blue: #3c83f6;
+  --color-accent-blue-light: #f0f6ff;
+  --color-accent-blue-mid: #bedbfe;
+  --color-accent-green: #16a249;
+  --color-accent-green-light: #f2fdf5;
+  --color-accent-amber: #db7706;
+  --color-accent-amber-light: #fffbeb;
+  --color-accent-red: #dc2828;
+  --color-accent-purple: #8249df;
+  --color-accent-purple-light: #f6f0ff;
+  --color-accent-gray-light: #f3f4f6;
+  --color-accent-gray-mid: #e5e7eb;
 }
 
-.dark {
-  --app-background: hsl(222 47% 6%);
-  --app-foreground: hsl(210 40% 96%);
-  --app-card: hsl(222 47% 9%);
-  --app-card-foreground: hsl(210 40% 96%);
-  --app-popover: hsl(222 47% 9%);
-  --app-popover-foreground: hsl(210 40% 96%);
-  --app-primary: hsl(217 91% 60%);
-  --app-primary-foreground: hsl(0 0% 100%);
-  --app-secondary: hsl(217 33% 17%);
-  --app-secondary-foreground: hsl(210 40% 96%);
-  --app-muted: hsl(217 33% 17%);
-  --app-muted-foreground: hsl(215 20% 65%);
-  --app-accent: hsl(217 33% 17%);
-  --app-accent-foreground: hsl(210 40% 96%);
-  --app-destructive: hsl(0 63% 31%);
-  --app-destructive-foreground: hsl(210 40% 98%);
-  --app-border: hsl(217 33% 17%);
-  --app-input: hsl(217 33% 17%);
-  --app-ring: hsl(217 91% 60%);
-  --app-surface2: hsl(222 47% 11%);
-  --app-border-strong: hsl(217 25% 25%);
-  --app-ac-blue: hsl(217 91% 60%);
-  --app-ac-blue-light: hsl(217 50% 15%);
-  --app-ac-blue-mid: hsl(217 50% 30%);
-  --app-ac-green: hsl(142 76% 36%);
-  --app-ac-green-light: hsl(142 40% 12%);
-  --app-ac-amber: hsl(32 95% 44%);
-  --app-ac-amber-light: hsl(32 50% 12%);
-  --app-ac-red: hsl(0 72% 51%);
-  --app-ac-purple: hsl(263 70% 58%);
-  --app-ac-purple-light: hsl(263 50% 12%);
-  --app-ac-gray-light: hsl(220 20% 14%);
-  --app-ac-gray-mid: hsl(220 15% 20%);
+/*
+  @theme inline (Tailwind v4):
+  - Creates Tailwind design tokens from CSS variables.
+  - Example: `--color-card` enables utility classes like `bg-card`.
+  - `inline` means values are resolved from variables directly at build/runtime.
+
+  Alternative (without @theme):
+  - Write normal CSS classes directly, like:
+      .card { background: #ffffff; border: 1px solid #dee2e8; }
+  - Or define theme values in JS config (older Tailwind setup) instead of CSS.
+*/
+@theme inline {
+  --color-background: var(--color-page-bg);
+  --color-foreground: var(--color-text-main);
+  --color-card: var(--color-surface-card);
+  --color-primary: var(--color-brand-primary);
+  --color-primary-foreground: var(--color-text-on-primary);
+  --color-muted: var(--color-muted-bg);
+  --color-muted-foreground: var(--color-text-muted);
+  --color-border: var(--color-border-default);
+  --color-surface2: var(--color-surface-subtle);
+  --color-border-strong: var(--color-border-strong);
+  --color-ac-blue: var(--color-accent-blue);
+  --color-ac-blue-light: var(--color-accent-blue-light);
+  --color-ac-blue-mid: var(--color-accent-blue-mid);
+  --color-ac-green: var(--color-accent-green);
+  --color-ac-green-light: var(--color-accent-green-light);
+  --color-ac-amber: var(--color-accent-amber);
+  --color-ac-amber-light: var(--color-accent-amber-light);
+  --color-ac-red: var(--color-accent-red);
+  --color-ac-purple: var(--color-accent-purple);
+  --color-ac-purple-light: var(--color-accent-purple-light);
+  --color-ac-gray-light: var(--color-accent-gray-light);
+  --color-ac-gray-mid: var(--color-accent-gray-mid);
 }
 
-@layer base {
+/*
+  @layer base:
+  - Adds global styles into Tailwind's "base" layer.
+  - Useful for defaults (resets, body styles, global element rules).
+
+  Alternative (without @layer):
+  - You can write global CSS directly:
+      * { border-color: #dee2e8; }
+  - But @layer keeps Tailwind ordering predictable.
+*/
+/* @layer base {
   *,
   ::before,
   ::after {
-    border-color: var(--app-border);
+    border-color: var(--color-border-default);
   }
-}
+} */
 
 body {
-  background: var(--app-background);
-  color: var(--app-foreground);
+  background: var(--color-page-bg);
+  color: var(--color-text-main);
   -webkit-font-smoothing: antialiased;
   font-family: "DM Sans", sans-serif;
   font-size: 14px;
@@ -137,7 +99,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--app-border);
+  background: var(--color-border-default);
   border-radius: 3px;
 }
 

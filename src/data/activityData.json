@@ -153,13 +153,13 @@
     ]
   },
   "modalDefaults": {
+    "tabs": ["Overview", "Capital Balance", "Reconciliation", "NAV Pack"],
     "kpis": [
       { "label": "Subscriptions (YTD)", "value": "$33.0M", "sub": "Net: $32.34M" },
       { "label": "Redemptions (YTD)", "value": "$5.0M", "sub": "Net: $5.05M" },
       { "label": "Workflow progress", "value": "72%", "sub": "8 of 11 steps done", "dynamic": true },
       { "label": "Pending actions", "value": "2", "sub": "Client approval needed", "warn": true }
     ],
-    "tabs": ["Overview", "Capital Balance", "Reconciliation", "NAV Pack"],
     "workflowSteps": [
       { "name": "Pre period end checks", "status": "Completed", "state": "done" },
       { "name": "Transactions processing", "status": "Completed", "state": "done" },

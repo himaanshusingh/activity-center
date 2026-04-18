@@ -1,5 +1,3 @@
-import { cn } from "@/lib/utils.js";
-
 const typeStyles = {
   delivered: "bg-ac-green-light text-[#166534]",
   initiated: "bg-ac-amber-light text-[#92400e]",
@@ -9,7 +7,11 @@ const typeStyles = {
 };
 
 const StatusTag = ({ label, type }) => (
-  <span className={cn("inline-flex items-center gap-1 text-[11px] font-medium px-2.5 py-0.75 rounded-full", typeStyles[type])}>{label}</span>
+  <span
+    className={`inline-flex items-center gap-1 text-[11px] font-medium px-2.5 py-0.75 rounded-full ${typeStyles[type] || ""}`}
+  >
+    {label}
+  </span>
 );
 
 export default StatusTag;

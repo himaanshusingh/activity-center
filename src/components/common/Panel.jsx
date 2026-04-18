@@ -1,5 +1,4 @@
 import { Clipboard, Clock, CreditCard, DollarSign, FileText } from "lucide-react";
-import { cn } from "@/lib/utils.js";
 
 const iconMap = {
   clipboard: Clipboard,
@@ -21,10 +20,14 @@ const Panel = ({ title, icon, iconColor, badge, actions, footer, fullWidth, chil
   const IconComp = iconMap[icon] || Clipboard;
 
   return (
-    <div className={cn("bg-card border border-border rounded-xl overflow-hidden shadow-sm", fullWidth && "col-span-full")}>
+    <div
+      className={`bg-card border border-border rounded-xl overflow-hidden shadow-sm ${fullWidth ? "col-span-full" : ""}`}
+    >
       <div className="px-3 sm:px-4 py-3.5 border-b border-border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-3 bg-card">
         <div className="flex items-center gap-2 text-sm font-semibold text-foreground min-w-0">
-          <div className={cn("w-7 h-7 rounded-md flex items-center justify-center shrink-0", colorMap[iconColor])}>
+          <div
+            className={`w-7 h-7 rounded-md flex items-center justify-center shrink-0 ${colorMap[iconColor] || ""}`}
+          >
             <IconComp className="w-3.5 h-3.5" />
           </div>
           <span className="truncate">{title}</span>
