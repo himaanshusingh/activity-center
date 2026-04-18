@@ -62,23 +62,10 @@
   --color-ac-gray-mid: var(--color-accent-gray-mid);
 }
 
-/*
-  @layer base:
-  - Adds global styles into Tailwind's "base" layer.
-  - Useful for defaults (resets, body styles, global element rules).
-
-  Alternative (without @layer):
-  - You can write global CSS directly:
-      * { border-color: #dee2e8; }
-  - But @layer keeps Tailwind ordering predictable.
-*/
-/* @layer base {
-  *,
-  ::before,
-  ::after {
-    border-color: var(--color-border-default);
-  }
-} */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border-default) transparent;
+}
 
 body {
   background: var(--color-page-bg);
@@ -87,20 +74,6 @@ body {
   font-family: "DM Sans", sans-serif;
   font-size: 14px;
   line-height: 1.5;
-}
-
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--color-border-default);
-  border-radius: 3px;
 }
 
 @keyframes slideUp {
